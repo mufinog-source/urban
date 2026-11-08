@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Grill MZ | O Verdadeiro Sabor de Maputo</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+        body { font-family: 'Outfit', sans-serif; background-color: #0c0a09; color: #f5f5f4; }
+        .hero-bg {
+            background: linear-gradient(to bottom, rgba(12, 10, 9, 0.7), rgba(12, 10, 9, 0.95)), url('https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .fire-gradient { background: linear-gradient(135deg, #ea580c 0%, #dc2626 50%, #f59e0b 100%); }
+        .fire-text { background: linear-gradient(135deg, #f97316 0%, #ef4444 50%, #fbbf24 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card-glass { background: rgba(28, 25, 23, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(234, 88, 12, 0.2); }
+    </style>
+</head>
+<body class="selection:bg-orange-500 selection:text-white pb-24">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-40 bg-stone-950/90 backdrop-blur-md border-b border-stone-800">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="w-10 h-10 rounded-xl fire-gradient flex items-center justify-center text-white font-black text-xl shadow-lg shadow-orange-900/40">
+                    <i class="fa-solid fa-fire-flame-curved"></i>
+                </div>
+                <div>
+                    <h1 class="font-black text-lg tracking-tight text-white leading-none">URBAN GRILL</h1>
+                    <span class="text-xs text-orange-500 font-bold tracking-widest uppercase">Maputo MZ</span>
+                </div>
+            </div>
+            <div class="flex items-center gap-3">
+                <button onclick="toggleCart()" class="relative bg-stone-900 border border-stone-800 text-stone-200 px-4 py-2 rounded-full font-medium text-sm flex items-center gap-2 hover:border-orange-500 transition">
+                    <i class="fa-solid fa-cart-shopping text-orange-500"></i>
+                    <span>Carrinho</span>
+                    <span id="cart-badge" class="absolute -top-1 -right-1 bg-red-600 text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center shadow">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg py-20 px-4 text-center relative border-b border-stone-800">
+        <div class="max-w-3xl mx-auto">
+            <span class="inline-block bg-orange-500/10 border border-orange-500/30 text-orange-400 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4">
+                🔥 Avenidas • Maputo
+            </span>
+            <h2 class="text-4xl md:text-6xl font-black text-white tracking-tight mb-4 uppercase">
+                O Verdadeiro Sabor de <span class="fire-text">Moçambique</span>
+            </h2>
+            <p class="text-stone-300 text-base md:text-lg mb-8 max-w-xl mx-auto">
+                Frangos grelhados no ponto, hambúrgueres artesanais sumarentos e pizzas irresistíveis a preços acessíveis.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#menu" class="fire-gradient text-white font-bold px-8 py-4 rounded-xl shadow-lg shadow-orange-600/30 hover:opacity-90 transition text-center flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-utensils"></i> Ver Menu Completo
+                </a>
+                <a href="https://wa.me/258876008059?text=Olá!%20Gostaria%20de%20fazer%20um%20pedido%20no%20Urban%20Grill." target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-8 py-4 rounded-xl shadow-lg shadow-emerald-900/30 transition text-center flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-xl"></i> Pedir via WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Nós -->
+    <section class="py-16 px-4 bg-stone-900/50">
+        <div class="max-w-4xl mx-auto text-center">
+            <h3 class="text-xs font-bold text-orange-500 tracking-widest uppercase mb-2">A Nossa Essência</h3>
+            <h4 class="text-2xl md:text-3xl font-black text-white mb-6">Feito com Paixão e Ingredientes Locais</h4>
+            <p class="text-stone-300 text-sm md:text-base leading-relaxed mb-6">
+                No <strong class="text-white">Urban Grill MZ</strong>, valorizamos os produtos frescos da nossa terra. O nosso grande segredo está no molho exclusivo e artesanal feito com <span class="text-orange-400 font-semibold">8 ervas e especiarias moçambicanas</span>, grelhado na brasa para garantir aquele fumo e sabor inconfundível que conquista Maputo.
+            </p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+                <div class="card-glass p-4 rounded-2xl text-center">
+                    <i class="fa-solid fa-seedling text-orange-500 text-2xl mb-2"></i>
+                    <h5 class="font-bold text-sm text-white">100% Fresco</h5>
+                    <p class="text-xs text-stone-400">Produtos locais selecionados</p>
+                </div>
+                <div class="card-glass p-4 rounded-2xl text-center">
+                    <i class="fa-solid fa-fire text-red-500 text-2xl mb-2"></i>
+                    <h5 class="font-bold text-sm text-white">Na Brasa</h5>
+                    <p class="text-xs text-stone-400">Sabor fumado autêntico</p>
+                </div>
+                <div class="card-glass p-4 rounded-2xl text-center">
+                    <i class="fa-solid fa-pepper-hot text-amber-500 text-2xl mb-2"></i>
+                    <h5 class="font-bold text-sm text-white">Molho Secreto</h5>
+                    <p class="text-xs text-stone-400">8 ervas moçambicanas</p>
+                </div>
+                <div class="card-glass p-4 rounded-2xl text-center">
+                    <i class="fa-solid fa-bolt text-yellow-500 text-2xl mb-2"></i>
+                    <h5 class="font-bold text-sm text-white">Entrega Rápida</h5>
+                    <p class="text-xs text-stone-400">Direto para a sua mesa</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-16 px-4 max-w-6xl mx-auto">
+        <div class="text-center mb-10">
+            <h3 class="text-xs font-bold text-orange-500 tracking-widest uppercase mb-2">Delicie-se</h3>
+            <h4 class="text-3xl font-black text-white">O Nosso Menu em Destaque</h4>
+            <p class="text-stone-400 text-sm mt-1">Escolha os seus pratos favoritos e adicione ao pedido</p>
+        </div>
+
+        <!-- Categorias Tabs -->
+        <div class="flex flex-wrap justify-center gap-2 mb-10">
+            <button onclick="filterMenu('all')" class="tab-btn active bg-orange-600 text-white px-5 py-2.5 rounded-xl font-bold text-sm shadow transition">Todos</button>
+            <button onclick="filterMenu('chicken')" class="tab-btn bg-stone-900 border border-stone-800 text-stone-300 px-5 py-2.5 rounded-xl font-bold text-sm hover:border-orange-500 transition">Urban Chicken</button>
+            <button onclick="filterMenu('burgers')" class="tab-btn bg-stone-900 border border-stone-800 text
